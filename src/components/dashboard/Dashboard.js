@@ -31,11 +31,13 @@ class Dashboard extends React.Component {
     }
     // Tessio --------------------------------------
     addTessioList = (list) => {
-
+        list = this.state.value.match(/\d[a-zA-Z] [a-zA-Z]+/g).map((item, index) => item.id = index);
+        this.setState({tessio : list});
     }
     // ToadHouse -----------------------------------
     addToadhouseList = (list) => {
-
+        list = this.state.value.match(/\d[a-zA-Z] [a-zA-Z]+/g).map((item, index) => item.id = index);
+        this.setState({toad : list});
     }
     // Other functions -----------------------------
     togglePage = () => {
@@ -52,7 +54,7 @@ class Dashboard extends React.Component {
                 <div className="dashboard-head-container">
                     <div className="hamburger-container">
                         <div className="toggle-business">
-                            <span><span className="switch" onClick={this.togglePage}>switch</span> to { this.state.page ? <span>Tessio</span> : <span>Toad House</span> }</span>
+                            <span><span className="switch" onClick={this.togglePage}>(switch)</span> to { this.state.page ? <span>Tessio</span> : <span>Toad House</span> }</span>
                         </div>
                     </div>
                         { this.state.page ? <h1>Toad House</h1> : <h1>Tessio</h1> }
