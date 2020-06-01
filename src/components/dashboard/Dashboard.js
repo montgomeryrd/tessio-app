@@ -1,6 +1,6 @@
 import React from 'react';
-// import Tessio from '../tessio/Tessio';
-// import Toadhouse from '../toadhouse/Toadhouse';
+import Tessio from '../tessio/Tessio';
+import Toadhouse from '../toadhouse/Toadhouse';
 import '../../styles/dashboard.css';
 
 class Dashboard extends React.Component {
@@ -8,9 +8,9 @@ class Dashboard extends React.Component {
         super(props)
         this.state = {
             value: "",
+            page : true,
             tessio : [],
             toad : [],
-            page : true,
         }
         this.handleChange=this.handleChange.bind(this);
         this.handleTessioSubmit=this.handleTessioSubmit.bind(this);
@@ -26,18 +26,23 @@ class Dashboard extends React.Component {
     }
     handleToadSubmit = (e) => {
         e.preventDefault();
-        this.addToadList(this.state);
+        this.addToadhouseList(this.state);
         this.setState({value : ""});
     }
     // Tessio --------------------------------------
     addTessioList = (list) => {
-        list = this.state.value.match(/\d[a-zA-Z] [a-zA-Z]+/g).map((item, index) => item.id = index);
-        this.setState({tessio : list});
+        list = this.state.value.match(/\d[a-zA-Z] [a-zA-Z]+/g);
+        this.setState({tessio : list}, () => {
+            console.log("tessio ", this.state.tessio);
+        });
     }
     // ToadHouse -----------------------------------
     addToadhouseList = (list) => {
-        list = this.state.value.match(/\d[a-zA-Z] [a-zA-Z]+/g).map((item, index) => item.id = index);
-        this.setState({toad : list});
+        list = this.state.value.match(/\d[a-zA-Z] [a-zA-Z]+/g);
+        const toad = list;
+        this.setState({toad : toad}, () => {
+            console.log("toad ", this.state.toad);
+        });
     }
     // Other functions -----------------------------
     togglePage = () => {
@@ -54,21 +59,33 @@ class Dashboard extends React.Component {
                 <div className="dashboard-head-container">
                     <div className="hamburger-container">
                         <div className="toggle-business">
-                            <span><span className="switch" onClick={this.togglePage}>(switch)</span> to { this.state.page ? <span>Tessio</span> : <span>Toad House</span> }</span>
+                            <span><span className="switch" onClick={this.togglePage}>(switch)</span> to { this.state.page ? <span>Toad House</span> : <span>Tessio</span> }</span>
                         </div>
                     </div>
-                        { this.state.page ? <h1>Toad House</h1> : <h1>Tessio</h1> }
+                        { this.state.page ? <h1>Tessio</h1> : <h1>Toad House</h1> }
                     <h5>{currentDate}</h5>
                     <h6>{currentDay}</h6>
                 </div>
                 <div className="dashboard-body-container">
                     { this.state.page ? (
                         <div>
-                            {/* <Tessio /> */}
+                            <Tessio 
+                                value={this.state.value}
+                                page={this.state.page}
+                                tessio={this.state.tessio}
+                                handleChange={this.handleChange}
+                                handleTessioSubmit={this.handleTessioSubmit}    
+                            />
                         </div>
                     ) : (
                         <div>
-                            {/* <Toadhouse /> */}
+                            <Toadhouse 
+                                value={this.state.value}
+                                page={this.state.page}
+                                toad={this.state.toad}
+                                handleChange={this.handleChange}
+                                handleToadSubmit={this.handleToadSubmit}
+                            />
                         </div>
                     )}
                 </div>
