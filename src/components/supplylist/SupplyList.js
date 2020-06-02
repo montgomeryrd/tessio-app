@@ -1,22 +1,22 @@
 import React from 'react';
+import '../../styles/dashboard.css';
 
 const SupplyList = (props) => {
     return (
         <div>
-            <label className="list" name="list">copy and paste</label>
-            <form className="form-container" onSubmit={ props.page ? props.handleTessioSubmit : props.handleToadSubmit }>
+            <form className="form-container" onSubmit={props.handleSubmit}>
                 <textarea 
                     id="list" 
                     name="list" 
-                    rows="10" 
+                    rows="25" 
                     cols="33"
                     autoComplete="off"
                     value={props.value}
                     onChange={props.handleChange}
                     required={true}
-                    placeholder="3x Basil">
+                    placeholder="copy and paste order">
                 </textarea>
-                <button type="submit" onSubmit={ props.page ? props.handleTessioSubmit : props.handleToadSubmit }>add</button>
+                <button className="submit" type="submit" onSubmit={props.handleSubmit}>add</button>
             </form>
         </div>
     )

@@ -1,13 +1,16 @@
 import React from 'react';
 import SupplyList from '../supplylist/SupplyList';
+import '../../styles/dashboard.css';
 
 const Tessio = (props) => {
-    const list = props.tessio.length ? (
+    const list = !props.tessio ? window.location.reload(true) : props.tessio.length ? (
         props.tessio.map((item, index) => {
             return (
                 <div className="item-container" key={index}>
                     <div className="blue-line">
-                        <span className="item">{item}</span>
+                        <span className="item-complete" style={{opacity : props.complete.includes(item) ? .3 : 1}} onClick={() => {props.completeItem(index)}}>
+                            <span className="item">{item}</span>
+                        </span>
                     </div>
                 </div>
             )
@@ -19,7 +22,7 @@ const Tessio = (props) => {
                 page={props.page}
                 tessio={props.tessio}
                 handleChange={props.handleChange}
-                handleTessioSubmit={props.handleTessioSubmit}
+                handleSubmit={props.handleSubmit}
             />
         </div>
     )

@@ -1,6 +1,5 @@
 import React from 'react';
 import Tessio from '../tessio/Tessio';
-import Toadhouse from '../toadhouse/Toadhouse';
 import '../../styles/dashboard.css';
 
 class Dashboard extends React.Component {
@@ -8,46 +7,47 @@ class Dashboard extends React.Component {
         super(props)
         this.state = {
             value: "",
-            page : true,
             tessio : [],
-            toad : [],
+            complete : [],
         }
         this.handleChange=this.handleChange.bind(this);
-        this.handleTessioSubmit=this.handleTessioSubmit.bind(this);
-        this.handleToadSubmit=this.handleToadSubmit.bind(this);
+        this.handleSubmit=this.handleSubmit.bind(this);
     }
     handleChange = (e) => {
-        this.setState({value : e.target.value})
+        this.setState({value : e.target.value});
     }
-    handleTessioSubmit = (e) => {
+    handleSubmit = (e) => {
         e.preventDefault();
-        this.addTessioList(this.state);
+        this.addList(this.state);
         this.setState({value : ""});
     }
-    handleToadSubmit = (e) => {
-        e.preventDefault();
-        this.addToadhouseList(this.state);
-        this.setState({value : ""});
-    }
-    // Tessio --------------------------------------
-    addTessioList = (list) => {
-        list = this.state.value.match(/\d[a-zA-Z] [a-zA-Z]+/g);
+    
+    addList = (list) => {
+        list = this.state.value.match(/\d(.*)/g);
         this.setState({tessio : list}, () => {
             console.log("tessio ", this.state.tessio);
         });
     }
-    // ToadHouse -----------------------------------
-    addToadhouseList = (list) => {
-        list = this.state.value.match(/\d[a-zA-Z] [a-zA-Z]+/g);
-        const toad = list;
-        this.setState({toad : toad}, () => {
-            console.log("toad ", this.state.toad);
-        });
+    completeItem = (index) => {
+        if(this.state.complete.includes(this.state.tessio[index])) {
+            const i = this.state.complete.indexOf(this.state.tessio[index]);
+            let complete = this.state.complete;
+            complete.splice(i, 1);
+            this.setState({complete : complete}, () => {
+                console.log("complete ", this.state.complete);
+            });
+        } else {
+            const complete = [...this.state.complete, this.state.tessio[index]];
+            this.setState({complete : complete}, () => {
+                console.log("complete ",this.state.complete);
+            });
+        }
     }
-    // Other functions -----------------------------
-    togglePage = () => {
-        const page = !this.state.page;
-        this.setState({page : page});
+    removeCompletedItems = (array) => {
+        let tessio = [], complete = [];
+        this.state.tessio.forEach(item => !this.state.complete.includes(item) ? tessio.push(item) : item);
+        this.setState({tessio : tessio});
+        this.setState({complete : complete});
     }
 
     render() {
@@ -57,40 +57,23 @@ class Dashboard extends React.Component {
         return (
             <div className="dashboard-container">
                 <div className="dashboard-head-container">
-                    <div className="hamburger-container">
-                        <div className="toggle-business">
-                            <span><span className="switch" onClick={this.togglePage}>(switch)</span> to { this.state.page ? <span>Toad House</span> : <span>Tessio</span> }</span>
-                        </div>
-                    </div>
-                        { this.state.page ? <h1>Tessio</h1> : <h1>Toad House</h1> }
-                    <h5>{currentDate}</h5>
-                    <h6>{currentDay}</h6>
+                    <h1>{currentDate}</h1>
+                    <h2>{currentDay}</h2>
                 </div>
                 <div className="dashboard-body-container">
-                    { this.state.page ? (
-                        <div>
-                            <Tessio 
-                                value={this.state.value}
-                                page={this.state.page}
-                                tessio={this.state.tessio}
-                                handleChange={this.handleChange}
-                                handleTessioSubmit={this.handleTessioSubmit}    
-                            />
-                        </div>
-                    ) : (
-                        <div>
-                            <Toadhouse 
-                                value={this.state.value}
-                                page={this.state.page}
-                                toad={this.state.toad}
-                                handleChange={this.handleChange}
-                                handleToadSubmit={this.handleToadSubmit}
-                            />
-                        </div>
-                    )}
+                    <div>
+                        <Tessio 
+                            value={this.state.value}
+                            tessio={this.state.tessio}
+                            complete={this.state.complete}
+                            completeItem={this.completeItem}
+                            handleChange={this.handleChange}
+                            handleSubmit={this.handleSubmit}    
+                        />
+                    </div>
                 </div>
                 <div className="dashboard-foot-container">
-
+                    <button onClick={this.removeCompletedItems}>remove completed</button>
                 </div>
             </div>
         )
