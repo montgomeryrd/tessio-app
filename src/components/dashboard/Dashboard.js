@@ -72,8 +72,8 @@ class Dashboard extends React.Component {
                         />
                     </div>
                 </div>
-                <div className="dashboard-foot-container">
-                    <button onClick={this.removeCompletedItems}>remove completed</button>
+                <div className="dashboard-foot-container" style={{display : this.state.tessio.length ? "block" : "none"}}>
+                    <button className="subnit" onClick={this.removeCompletedItems}>remove completed</button>
                 </div>
             </div>
         )

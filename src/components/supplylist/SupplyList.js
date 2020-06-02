@@ -16,7 +16,7 @@ const SupplyList = (props) => {
                     required={true}
                     placeholder="copy and paste order">
                 </textarea>
-                <button className="submit" type="submit" onSubmit={props.handleSubmit}>add</button>
+                <button className="submit" type="submit" onSubmit={props.handleSubmit}>populate list</button>
             </form>
         </div>
     )
