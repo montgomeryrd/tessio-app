@@ -35,6 +35,7 @@ html {
     max-width: 400px;
     height: 100%;
     font-family: 'Open Sans', sans-serif;
+    outline-style: none;
 }
 
 .dashboard-head-container {
