@@ -10,7 +10,7 @@ const Tessio = (props) => {
     const list = !props.tessio ? window.location.reload(true) : props.tessio.length ? (
         props.tessio.map((item, index) => {
             return (
-                <div className="item-container" key={index}>
+                <div className="item-container" unselectable="on" key={index}>
                     <div className="blue-line">
                         <span className="item-complete" style={{opacity : props.complete.includes(item) ? .2 : 1}} onClick={() => {props.completeItem(index)}}>
                             <span className="item">{item}</span>
@@ -36,7 +36,7 @@ const Tessio = (props) => {
             <div className="example-container">
                 <span>
                     <span className={ show ? "weak" : "strong"} onClick={toggle}>show</span>/
-                    <span className={ show ? "strong" : "weak"} onClick={toggle}>hide</span> example
+                    <span className={ show ? "strong" : "weak"} onClick={toggle}>hide</span> example list
                 </span>
                 <div className="example-modal" style={{display : show ? "block" : "none"}}> 
                     <span>example list:</span>

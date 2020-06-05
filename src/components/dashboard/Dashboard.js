@@ -53,7 +53,6 @@ class Dashboard extends React.Component {
     render() {
         const currentDate = new Date().toLocaleDateString(undefined, {year: 'numeric', month: 'long', day: 'numeric'});
         const currentDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][new Date().getDay()];
-        
         return (
             <div className="dashboard-container">
                 <div className="dashboard-head-container">
@@ -73,7 +72,7 @@ class Dashboard extends React.Component {
                     </div>
                 </div>
                 <div className="dashboard-foot-container" style={{display : this.state.tessio.length ? "block" : "none"}}>
-                    <button className="subnit" onClick={this.removeCompletedItems}>remove completed</button>
+                    <button className="submit" onClick={this.removeCompletedItems}>refresh list</button>
                 </div>
             </div>
         )
