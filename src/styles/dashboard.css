@@ -1,3 +1,7 @@
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .switch {
     font-weight: bold;
     cursor: pointer;
