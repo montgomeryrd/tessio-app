@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/shopping-list/static/css/main.b0baaf90.chunk.css",
-    "main.js": "/shopping-list/static/js/main.8dbe515c.chunk.js",
-    "main.js.map": "/shopping-list/static/js/main.8dbe515c.chunk.js.map",
-    "runtime-main.js": "/shopping-list/static/js/runtime-main.f922e5fb.js",
-    "runtime-main.js.map": "/shopping-list/static/js/runtime-main.f922e5fb.js.map",
-    "static/js/2.02a083b9.chunk.js": "/shopping-list/static/js/2.02a083b9.chunk.js",
-    "static/js/2.02a083b9.chunk.js.map": "/shopping-list/static/js/2.02a083b9.chunk.js.map",
-    "index.html": "/shopping-list/index.html",
-    "precache-manifest.bd1fd593fd77d7d446fccaa040a433b8.js": "/shopping-list/precache-manifest.bd1fd593fd77d7d446fccaa040a433b8.js",
-    "service-worker.js": "/shopping-list/service-worker.js",
-    "static/css/main.b0baaf90.chunk.css.map": "/shopping-list/static/css/main.b0baaf90.chunk.css.map",
-    "static/js/2.02a083b9.chunk.js.LICENSE.txt": "/shopping-list/static/js/2.02a083b9.chunk.js.LICENSE.txt"
+    "main.css": "/tessio-app/static/css/main.b0baaf90.chunk.css",
+    "main.js": "/tessio-app/static/js/main.8dbe515c.chunk.js",
+    "main.js.map": "/tessio-app/static/js/main.8dbe515c.chunk.js.map",
+    "runtime-main.js": "/tessio-app/static/js/runtime-main.e34daf9d.js",
+    "runtime-main.js.map": "/tessio-app/static/js/runtime-main.e34daf9d.js.map",
+    "static/js/2.02a083b9.chunk.js": "/tessio-app/static/js/2.02a083b9.chunk.js",
+    "static/js/2.02a083b9.chunk.js.map": "/tessio-app/static/js/2.02a083b9.chunk.js.map",
+    "index.html": "/tessio-app/index.html",
+    "precache-manifest.d2bd4532dc8b52935065d132f3bd25ba.js": "/tessio-app/precache-manifest.d2bd4532dc8b52935065d132f3bd25ba.js",
+    "service-worker.js": "/tessio-app/service-worker.js",
+    "static/css/main.b0baaf90.chunk.css.map": "/tessio-app/static/css/main.b0baaf90.chunk.css.map",
+    "static/js/2.02a083b9.chunk.js.LICENSE.txt": "/tessio-app/static/js/2.02a083b9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.f922e5fb.js",
+    "static/js/runtime-main.e34daf9d.js",
     "static/js/2.02a083b9.chunk.js",
     "static/css/main.b0baaf90.chunk.css",
     "static/js/main.8dbe515c.chunk.js"
