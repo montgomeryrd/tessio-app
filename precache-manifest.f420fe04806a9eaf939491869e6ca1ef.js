@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f9ac0bd96912229170a5210e3d915a9d",
+    "revision": "5a823e4e8c1d36e236155b332863559a",
     "url": "/tessio-app/index.html"
   },
   {
-    "revision": "8f3874cfa6309b78e35a",
-    "url": "/tessio-app/static/css/main.7eb90615.chunk.css"
+    "revision": "70487f28cd063619aca8",
+    "url": "/tessio-app/static/css/main.e8af41c9.chunk.css"
   },
   {
     "revision": "4d48d9861a4142255ad7",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tessio-app/static/js/2.02a083b9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8f3874cfa6309b78e35a",
+    "revision": "70487f28cd063619aca8",
     "url": "/tessio-app/static/js/main.fe17a0a5.chunk.js"
   },
   {
