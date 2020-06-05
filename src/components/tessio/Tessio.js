@@ -36,13 +36,15 @@ const Tessio = (props) => {
             <div className="example-container">
                 <span>
                     <span className={ show ? "weak" : "strong"} onClick={toggle}>show</span>/
-                    <span className={ show ? "strong" : "weak"} onClick={toggle}>hide</span> example list
+                    <span className={ show ? "strong" : "weak"} onClick={toggle}>hide</span> example
                 </span>
                 <div className="example-modal" style={{display : show ? "block" : "none"}}> 
-                    <span>example list:</span>
+                    <span className="strong">example order</span>
                     <br></br>
                     <br></br>
                     <ul>
+                        <li>(amount) and (item)</li>
+                        <br></br>
                         <li>3 Bags of Basil</li>
                         <li>4 Packs of 10" Pizza Boxes</li>
                         <li>1 Pack of #3 To-Go Boxes</li>

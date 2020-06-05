@@ -9,7 +9,8 @@
     "gh-pages": "^3.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "webkul-micron": "^1.1.6"
   },
   "homepage": "https://montgomeryrd.github.io/tessio-app",
   "scripts": {
