@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/tessio-app/static/css/main.b0baaf90.chunk.css",
-    "main.js": "/tessio-app/static/js/main.8dbe515c.chunk.js",
-    "main.js.map": "/tessio-app/static/js/main.8dbe515c.chunk.js.map",
+    "main.css": "/tessio-app/static/css/main.525ac9ac.chunk.css",
+    "main.js": "/tessio-app/static/js/main.fe17a0a5.chunk.js",
+    "main.js.map": "/tessio-app/static/js/main.fe17a0a5.chunk.js.map",
     "runtime-main.js": "/tessio-app/static/js/runtime-main.e34daf9d.js",
     "runtime-main.js.map": "/tessio-app/static/js/runtime-main.e34daf9d.js.map",
     "static/js/2.02a083b9.chunk.js": "/tessio-app/static/js/2.02a083b9.chunk.js",
     "static/js/2.02a083b9.chunk.js.map": "/tessio-app/static/js/2.02a083b9.chunk.js.map",
     "index.html": "/tessio-app/index.html",
-    "precache-manifest.d2bd4532dc8b52935065d132f3bd25ba.js": "/tessio-app/precache-manifest.d2bd4532dc8b52935065d132f3bd25ba.js",
+    "precache-manifest.31cc559626e0bc2c8f654158c0836597.js": "/tessio-app/precache-manifest.31cc559626e0bc2c8f654158c0836597.js",
     "service-worker.js": "/tessio-app/service-worker.js",
-    "static/css/main.b0baaf90.chunk.css.map": "/tessio-app/static/css/main.b0baaf90.chunk.css.map",
+    "static/css/main.525ac9ac.chunk.css.map": "/tessio-app/static/css/main.525ac9ac.chunk.css.map",
     "static/js/2.02a083b9.chunk.js.LICENSE.txt": "/tessio-app/static/js/2.02a083b9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e34daf9d.js",
     "static/js/2.02a083b9.chunk.js",
-    "static/css/main.b0baaf90.chunk.css",
-    "static/js/main.8dbe515c.chunk.js"
+    "static/css/main.525ac9ac.chunk.css",
+    "static/js/main.fe17a0a5.chunk.js"
   ]
 }
