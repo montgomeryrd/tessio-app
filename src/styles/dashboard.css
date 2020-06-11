@@ -42,7 +42,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #2196F3;
+    background-color: #2C3E50;
     border-bottom-left-radius: 3mm;
     border-bottom-right-radius: 3mm;
     padding: 5px;
@@ -74,8 +74,8 @@ html {
     margin: 0 auto;
     margin-top: 10px;
     width: 80%;
-    background-color: #eee;
-    border: solid 2px #FFCA28;
+    background-color: none;
+    border: solid 2px #566573;
 }
 
 .item-container {

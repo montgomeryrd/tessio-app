@@ -13,6 +13,16 @@ class Dashboard extends React.Component {
         this.handleChange=this.handleChange.bind(this);
         this.handleSubmit=this.handleSubmit.bind(this);
     }
+    componentDidMount() {
+        try {
+            const json = localStorage.getItem('data');
+            this.setState({...JSON.parse(json)});
+        } catch (error) {};
+    }
+    componentDidUpdate(prevProps, prevState) {  
+        const json = JSON.stringify(this.state);
+        localStorage.setItem('data', json);
+    }
     handleChange = (e) => {
         this.setState({value : e.target.value});
     }
@@ -72,7 +82,7 @@ class Dashboard extends React.Component {
                     </div>
                 </div>
                 <div className="dashboard-foot-container" style={{display : this.state.tessio.length ? "block" : "none"}}>
-                    <button className="submit" onClick={this.removeCompletedItems}>refresh list</button>
+                    <button className="submit" onClick={this.removeCompletedItems}>- refresh list -</button>
                 </div>
             </div>
         )
