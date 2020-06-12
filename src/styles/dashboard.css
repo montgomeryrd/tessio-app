@@ -12,21 +12,6 @@ html {
     cursor: pointer;
 }
 
-.example-container {
-    font-size: .8rem;
-    margin-left: 5px;
-}
-
-.example-modal {
-    position: absolute;
-    z-index: 100;
-    background-color: white;;
-    padding: 10px;
-    border: solid 1px black;
-    margin-top: 20px;
-    margin-left: 10px;
-}
-
 .dashboard-container {
     display: block;
     position: relative;
@@ -114,6 +99,7 @@ html {
     text-align: center;
     transition: all 0.8s;    
 }
+
 .submit:hover {
     color:#4095c6;
 }
@@ -124,7 +110,30 @@ html {
     text-align: center;
     bottom: 10px;
 }
-
+.restart-ask {
+    font-size: 1.2rem;
+}
+.start-over-modal {
+    display: inline-block;
+    margin: 20% 20%;
+    position: absolute;
+    padding: 30px;
+    z-index: 100;
+    background-color: #eee;
+    border: solid .5px black;
+    box-shadow: 12px 12px 2px 1px rgba(87, 87, 136, 0.2);
+    border-radius: 2mm;
+}
+.restart-btns {
+    border: none;
+}
+.start-over {
+    margin-top: 20px;
+    padding: 5px;
+    width: 150px;
+    border: solid .5px black;
+    border-radius: 2mm;
+}
 /* scrollbar */
 * {
     scrollbar-width: thin;

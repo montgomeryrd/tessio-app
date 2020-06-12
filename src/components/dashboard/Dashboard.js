@@ -9,6 +9,7 @@ class Dashboard extends React.Component {
             value: "",
             tessio : [],
             complete : [],
+            restart : false
         }
         this.handleChange=this.handleChange.bind(this);
         this.handleSubmit=this.handleSubmit.bind(this);
@@ -33,7 +34,8 @@ class Dashboard extends React.Component {
     }
     
     addList = (list) => {
-        list = this.state.value.match(/\d(.*)/g);
+        list = this.state.value.match(/(.+)/g);
+        list = list.filter(item => item !== "");
         this.setState({tessio : list}, () => {
             console.log("tessio ", this.state.tessio);
         });
@@ -59,16 +61,34 @@ class Dashboard extends React.Component {
         this.setState({tessio : tessio});
         this.setState({complete : complete});
     }
-
+    startOver = () => {
+        localStorage.clear();
+        window.location.reload(true);
+    }
+    toggle = () => {
+        const restart = !this.state.restart;
+        this.setState({restart : restart});
+    }
     render() {
         const currentDate = new Date().toLocaleDateString(undefined, {year: 'numeric', month: 'long', day: 'numeric'});
         const currentDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][new Date().getDay()];
+
         return (
             <div className="dashboard-container">
                 <div className="dashboard-head-container">
                     <h1>{currentDate}</h1>
                     <h2>{currentDay}</h2>
                 </div>
+                { this.state.restart ? (
+                    <div className="start-over-modal">
+                        <span className="restart-ask">Start Over? </span>
+                        <button className="restart-btns" onClick={this.startOver}>yes</button>
+                        <button className="restart-btns" onClick={this.toggle}>no</button>
+                    </div>
+                ) : (
+                    <div>
+                    </div>
+                )}
                 <div className="dashboard-body-container">
                     <div>
                         <Tessio 
@@ -83,6 +103,7 @@ class Dashboard extends React.Component {
                 </div>
                 <div className="dashboard-foot-container" style={{display : this.state.tessio.length ? "block" : "none"}}>
                     <button className="submit" onClick={this.removeCompletedItems}>- refresh list -</button>
+                    <button className="start-over" onClick={this.toggle}>start over</button>
                 </div>
             </div>
         )
