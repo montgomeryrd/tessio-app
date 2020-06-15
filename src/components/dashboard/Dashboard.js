@@ -13,6 +13,7 @@ class Dashboard extends React.Component {
         }
         this.handleChange=this.handleChange.bind(this);
         this.handleSubmit=this.handleSubmit.bind(this);
+        this.handleItemSubmit=this.handleItemSubmit.bind(this);
     }
     componentDidMount() {
         try {
@@ -30,6 +31,13 @@ class Dashboard extends React.Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.addList(this.state);
+        this.setState({value : ""});
+    }
+    handleItemSubmit = (e) => {
+        e.preventDefault();
+        let list = [...this.state.tessio, this.state.value];
+        list = list.filter(item => item !== "");
+        this.setState({tessio : list})
         this.setState({value : ""});
     }
     
@@ -97,7 +105,8 @@ class Dashboard extends React.Component {
                             complete={this.state.complete}
                             completeItem={this.completeItem}
                             handleChange={this.handleChange}
-                            handleSubmit={this.handleSubmit}    
+                            handleSubmit={this.handleSubmit}  
+                            handleItemSubmit={this.handleItemSubmit}  
                         />
                     </div>
                 </div>

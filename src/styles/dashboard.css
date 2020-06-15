@@ -134,6 +134,27 @@ html {
     border: solid .5px black;
     border-radius: 2mm;
 }
+.add {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 10px;
+}
+.add-input {
+    display: flex;
+    justify-content: center; 
+}
+.add-input input {
+    width: 80%;
+    margin-top: 5px;
+    border-bottom-left-radius: 2mm;
+    border-top-left-radius: 2mm;
+    border: solid .5px black;
+}
+.add-input-btn {
+    margin-top: 5px;
+    border-top-right-radius: 2mm;
+    border: solid .5px black;
+}
 /* scrollbar */
 * {
     scrollbar-width: thin;

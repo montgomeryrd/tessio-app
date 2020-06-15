@@ -1,5 +1,6 @@
 import React from 'react';
 import SupplyList from '../supplylist/SupplyList';
+import AddForm from '../addform/AddForm';
 import '../../styles/dashboard.css';
 
 const Tessio = (props) => {
@@ -20,7 +21,6 @@ const Tessio = (props) => {
         <div className="supplylist-container">
             <SupplyList 
                 value={props.value}
-                page={props.page}
                 tessio={props.tessio}
                 handleChange={props.handleChange}
                 handleSubmit={props.handleSubmit}
@@ -30,6 +30,16 @@ const Tessio = (props) => {
     
     return (
         <div className="tessio-container">
+            { list.length ? 
+                <AddForm 
+                    value={props.value}
+                    tessio={props.tessio}
+                    handleChange={props.handleChange}
+                    handleItemSubmit={props.handleItemSubmit}
+                />
+            :
+                <div></div>
+            }
             <div className="list">
                 {list}
             </div>
