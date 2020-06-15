@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/tessio-app/precache-manifest.36296299a2105732037da9ffca3adf2f.js"
+  "/tessio-app/precache-manifest.11213774ccb94b4e16633e2002d22bd7.js"
 );
 
 self.addEventListener('message', (event) => {

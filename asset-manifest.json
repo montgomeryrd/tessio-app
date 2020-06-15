@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tessio-app/static/css/main.51439e1f.chunk.css",
+    "main.css": "/tessio-app/static/css/main.34324051.chunk.css",
     "main.js": "/tessio-app/static/js/main.22830661.chunk.js",
     "main.js.map": "/tessio-app/static/js/main.22830661.chunk.js.map",
     "runtime-main.js": "/tessio-app/static/js/runtime-main.e34daf9d.js",
@@ -8,15 +8,15 @@
     "static/js/2.faa6c087.chunk.js": "/tessio-app/static/js/2.faa6c087.chunk.js",
     "static/js/2.faa6c087.chunk.js.map": "/tessio-app/static/js/2.faa6c087.chunk.js.map",
     "index.html": "/tessio-app/index.html",
-    "precache-manifest.36296299a2105732037da9ffca3adf2f.js": "/tessio-app/precache-manifest.36296299a2105732037da9ffca3adf2f.js",
+    "precache-manifest.11213774ccb94b4e16633e2002d22bd7.js": "/tessio-app/precache-manifest.11213774ccb94b4e16633e2002d22bd7.js",
     "service-worker.js": "/tessio-app/service-worker.js",
-    "static/css/main.51439e1f.chunk.css.map": "/tessio-app/static/css/main.51439e1f.chunk.css.map",
+    "static/css/main.34324051.chunk.css.map": "/tessio-app/static/css/main.34324051.chunk.css.map",
     "static/js/2.faa6c087.chunk.js.LICENSE.txt": "/tessio-app/static/js/2.faa6c087.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e34daf9d.js",
     "static/js/2.faa6c087.chunk.js",
-    "static/css/main.51439e1f.chunk.css",
+    "static/css/main.34324051.chunk.css",
     "static/js/main.22830661.chunk.js"
   ]
 }
