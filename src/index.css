@@ -116,8 +116,21 @@ li {
 .butt {
   margin-top: 10px;
 }
-
-.addlist {
-  width: 70%;
-  height: 70%;
+/* Add Section */
+.list-add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  width: 80%;
+  height: 60%;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+.add {
+  position: absolute;
+  color: #fff;
+  font-size: 4rem;
+  left: 0;
+  margin-top: -80px;
 }

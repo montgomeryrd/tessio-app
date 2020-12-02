@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Form({ setOrderList }) {
+const Form = ({ setOrderList }) => {
 
     const [value, setValue] = useState('');
 
