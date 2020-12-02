@@ -1,38 +1,36 @@
 import { useState } from 'react';
+import React from 'react'
 
-const Add = ({ value, setValue, orderList, setOrderList }) => {
-    const [show, setShow] = useState(false);
+const Add = ({ orderList, setOrderList, toggle, setToggle }) => {
+
+    const [value, setValue] = useState('');
 
     const handleChange = e => {
         setValue(e.target.value);
-    }
+    };
 
     const handleSubmit = e => {
         e.preventDefault();
-        const item = { val:value, id:Math.random() * 10, complete:false };
-        if (item.val !== '') setOrderList([item, ...orderList]);
+        const list = [...orderList, ...value.match(/(.+)/g).filter(item => item !== '').map((item, index) => item = { val: item, id: Math.randon() * index, complete: false })];
+        setOrderList(list);
         setValue('');
-    }
-       
+    };
+
     return (
-        <div className="add-container">
-            <h2 className="add" onClick={() => {setShow(!show)}} style={{display : show ? 'none' : 'block'}}>+</h2>
-            { show ?
-                <form className="add-input" onClick={handleSubmit}>
-                    <input
-                        id="name"
-                        name="name"
-                        autoComplete="off"
-                        onChange={handleChange}
-                        required={true}
-                        placeholder="add item"
-                    />
-                    <button className="btn" onClick={() => {setShow(!show)}} onSubmit={handleSubmit}>add</button>
-                </form>
-                :
-                <div></div>    
-            }
-        </div>
-    )
+        <form className="list addlist" onSubmit={handleSubmit}>
+            <textarea
+                id="list"
+                name="list"
+                rows="25"
+                cols="33"
+                autoComplete="off"
+                onChange={handleChange}
+                required={true}
+                placeholder="Add more items to list...">
+            </textarea>
+            <button className="btn butt" type="submit" onClick={() => {setToggle(!toggle)}} onSubmit={handleSubmit}>append</button>
+        </form>
+    );
 }
-export default Add;
+
+export default Add

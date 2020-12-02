@@ -22,19 +22,19 @@ body {
   display: flex;
   flex-direction: column;
 }
-.skew {
+.skew1 {
   background-color: #0e2e44;
   width: 100vw;
   height: 40vh;
   left: 0;
   right: 0;
 }
-.skewed-background {
+.skew2 {
   border-bottom: 30vh solid transparent;
   border-left: 100vw solid #0e2e44;
 }
 /* Textarea */
-h1 {
+.kirk {
   position: absolute;
   font-family: Arial, Helvetica, sans-serif;
   color: #fff;
@@ -116,30 +116,8 @@ li {
 .butt {
   margin-top: 10px;
 }
-/* Add Section */
-.add-container {
-  display: flex;
-  justify-content: center;
-}
-.add {
-  position: absolute;
-  color: #fff;
-  font-size: 4rem;
-  left: 0;
-  margin-top: -80px;
-}
 
-.add-input {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  margin: -80px 0 0 0vw;
-  padding: 2px;
-  overflow: hidden;
-  z-index: 100;
-}
-
-.add-input input {
-  font-size: 2rem;
-  width: 60vw;
+.addlist {
+  width: 70%;
+  height: 70%;
 }

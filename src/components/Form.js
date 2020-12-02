@@ -1,29 +1,28 @@
-const Form = ({ value, setValue, orderList, setOrderList }) => {
-    
+import { useState } from 'react';
+
+function Form({ setOrderList }) {
+
+    const [value, setValue] = useState('');
+
     const handleChange = e => {
         setValue(e.target.value);
-    }
+    };
 
     const handleSubmit = e => {
         e.preventDefault();
-        let list = value.match(/(.+)/g)
-            .filter(item => item !== '')
-            .map(item => {
-                item = { val:item, id:Math.random() * 10, complete:false }
-                return item;
-            });
-        setOrderList([...orderList, ...list]);
+        const list = value.match(/(.+)/g).filter(item => item !== '').map((item, index) => item = { val: item, id: Math.random() * index, complete: false });
+        setOrderList(list);
         setValue('');
-    }
+    };
 
     return (
         <div>
-            <h1>Kirk's App</h1>
+            <label className="kirk" htmlFor="list">Kirk's App</label>
             <form className="list" onSubmit={handleSubmit}>
-                <textarea 
-                    id="list" 
-                    name="list" 
-                    rows="25" 
+                <textarea
+                    id="list"
+                    name="list"
+                    rows="25"
                     cols="33"
                     autoComplete="off"
                     onChange={handleChange}
@@ -33,7 +32,7 @@ const Form = ({ value, setValue, orderList, setOrderList }) => {
                 <button className="btn butt" type="submit" onSubmit={handleSubmit}>create</button>
             </form>
         </div>
-    )
+    );
 }
 
-export default Form
+export default Form;
