@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Main from './components/Main';
 
-function App() {
+const App = () => {
 
 	const initialData = () => JSON.parse(window.localStorage.getItem('orderList')) || [];
 	const [orderList, setOrderList] = useState(initialData);
@@ -13,7 +13,8 @@ function App() {
 	return (
 		<Main
 			orderList={orderList}
-			setOrderList={setOrderList} />
+			setOrderList={setOrderList} 
+		/>
 	);
 }
 

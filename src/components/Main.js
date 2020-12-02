@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Add from './Add';
 import Form from './Form';
 
-function Main({ orderList, setOrderList }) {
+const Main = ({ orderList, setOrderList }) => {
 
     const [toggle, setToggle] = useState(false);
 
@@ -20,35 +20,40 @@ function Main({ orderList, setOrderList }) {
     // Map List Data
     const list = orderList.map(item => {
         return (
-            <div className="line">
-                <li key={item.id} unselectable="on" onClick={() => { update(item); } } style={{ opacity: item.complete ? .2 : 1 }}>{item.val}</li>
+            <div className="line" key={item.id} unselectable="on">
+                <li onClick={() => { update(item); } } style={{ opacity: item.complete ? .2 : 1 }}>{item.val}</li>
             </div>
         )
     });
 
+    // Styles
+    const backgroundShiftStyle = {
+        opacity: toggle ? .2 : 1
+    }
+
     return (
         <div className="App">
-            <div className="background-design">
+            <div className="background-design" style={backgroundShiftStyle}>
                 <div className="skew1"></div>
                 <div className="skew2"></div>
             </div>
             { !orderList.length ?
-                <Form
+                <Form 
                     setOrderList={setOrderList}
                 />            
                 : <div className="list">
-                    <h1 className="add" onClick={() => {setToggle(!toggle)}}>+</h1>
+                    <h1 className="add" style={backgroundShiftStyle} onClick={() => {setToggle(true)}}>+</h1>
                     { toggle ? (
                         <Add
+                            orderList={orderList}
                             setOrderList={setOrderList}
-                            toggle={toggle}
                             setToggle={setToggle}
                         />
                     ) : (
                         <div></div>
                     )}
-                    <ul>{list}</ul>
-                    <button className="btn butt" onClick={remove}>remove</button>
+                    <ul style={backgroundShiftStyle}>{list}</ul>
+                    <button className="btn butt" style={backgroundShiftStyle} onClick={remove}>remove</button>
                 </div>}
         </div>
     );
