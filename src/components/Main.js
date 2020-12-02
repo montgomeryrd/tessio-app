@@ -58,4 +58,5 @@ const Main = ({ orderList, setOrderList }) => {
         </div>
     );
 }
+
 export default Main;
