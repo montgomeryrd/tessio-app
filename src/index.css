@@ -47,7 +47,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 90vw;
-  height: 80vh;
+  height: 75vh;
   margin: 80px 5vw 0 5vw;
 }
 
@@ -68,7 +68,7 @@ ul {
 }
 
 li {
-  font-size: 2rem;
+  font-size: 1.4rem;
   cursor: pointer;
   padding: 5px;
   margin-top: 5px;
@@ -85,6 +85,7 @@ li {
   border-bottom: .5px solid #0e2e44;
   border-bottom-left-radius: 2mm;
   border-bottom-right-radius: 2mm;
+  margin-left: 10px;
 }
 /* Button Style */
 .btn {
@@ -97,7 +98,7 @@ li {
 	cursor: pointer;
 	color:#ffffff;
 	font-family: Arial;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	padding: 6px 24px;
 	text-decoration: none;
 	text-shadow: 0px 1px 0px #154682;
@@ -132,5 +133,5 @@ li {
   color: #fff;
   font-size: 3rem;
   left: 0;
-  margin-top: -60px;
+  margin-top: -55px;
 }

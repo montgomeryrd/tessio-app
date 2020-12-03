@@ -26,7 +26,7 @@ const Add = ({ orderList, setOrderList, setToggle }) => {
                 autoComplete="off"
                 onChange={handleChange}
                 required={true}
-                placeholder="Input list...">
+                placeholder="add items">
             </textarea>
             <button className="btn butt-add" type="submit" onSubmit={handleSubmit}>append</button>
         </form>
