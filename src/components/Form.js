@@ -27,7 +27,7 @@ const Form = ({ setOrderList }) => {
                     autoComplete="off"
                     onChange={handleChange}
                     required={true}
-                    placeholder="Input list...">
+                    placeholder="input items">
                 </textarea>
                 <button className="btn butt" type="submit" onSubmit={handleSubmit}>create</button>
             </form>
