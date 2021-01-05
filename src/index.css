@@ -1,65 +1,55 @@
-body {
-  padding: 0;
-  margin: 0;
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
-/* Scroll Bar */
-* {
-  scrollbar-width: thin;
-}
-*::-webkit-scrollbar {
-  width: 12px;
-}
-*::-webkit-scrollbar-track {
-  background: inherit;
-}
-*::-webkit-scrollbar-thumb {
-  background-color: #15ff00;
-  border: 1px solid #0e2e44;
-}
-/* Blue Background Design */
-.background-design {
+.app {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-}
-.skew1 {
   background-color: #0e2e44;
-  width: 100vw;
-  height: 30vh;
   left: 0;
   right: 0;
+  max-width: 640px;  
+  max-height: 100%;
+  margin: 0 auto;
 }
-.skew2 {
-  border-bottom: 30vh solid transparent;
-  border-left: 100vw solid #0e2e44;
-}
-/* Textarea */
 .kirk {
-  position: absolute;
   font-family: Arial, Helvetica, sans-serif;
   color: #fff;
   margin: 30px 0 0 30px;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
+#add-hiding {
+  display: none;
+}
+#add-showing {
+  position: absolute;
+  background: transparent;
+  border: transparent;
+  color: #fff;
+  font-size: 3em;
+  left: 165px;
+  top: 15px;
+}
+#add-showing:hover {
+  font-size: 3.2em;
+}
+.input-form {
+  position: relative;
+  margin: 30px 10px 10px 10px;
+  border: 1px solid red;
+}
+.input-form textarea {
+  width: 100%;
+  font-size: 2.5em;
+  box-sizing: border-box;
+}
+
 
 .list {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  width: 90vw;
-  height: 75vh;
-  margin: 80px 5vw 0 5vw;
+  margin: 30px 10px 0 10px;
+  font-size: 2.5em;
 }
-
-textarea {
-  border: 4px solid #0e2e44;
-  height: 100%;
-  font-size: 2rem;
-}
-
 ul {
   border: 4px solid #0e2e44;
-  height: 100%;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -68,7 +58,7 @@ ul {
 }
 
 li {
-  font-size: 1.4rem;
+  font-size: 2.5rem;
   cursor: pointer;
   padding: 5px;
   margin-top: 5px;
@@ -83,11 +73,9 @@ li {
 
 .line {
   border-bottom: .5px solid #0e2e44;
-  border-bottom-left-radius: 2mm;
-  border-bottom-right-radius: 2mm;
-  margin-left: 5px;
+  margin: 0 5px 5px 5px;
 }
-/* Button Style */
+
 .btn {
 	box-shadow: inset 0px 1px 0px 0px #54a3f7;
 	background: linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
@@ -98,7 +86,10 @@ li {
 	cursor: pointer;
 	color:#ffffff;
 	font-family: Arial;
-	font-size: 1.5rem;
+  font-size: 2.5rem;
+  margin: 10px 0;
+  max-width: 780px;
+  width: 100%;
 	padding: 6px 24px;
 	text-decoration: none;
 	text-shadow: 0px 1px 0px #154682;
@@ -112,26 +103,4 @@ li {
 .btn:active {
 	position: relative;
 	top: 1px;
-}
-
-.butt {
-  margin-top: 10px;
-}
-/* Add Section */
-.list-add {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  width: 80%;
-  height: 60%;
-  margin-top: 5%;
-  margin-left: 10%;
-}
-.add {
-  position: absolute;
-  color: #fff;
-  font-size: 3rem;
-  left: 0;
-  margin-top: -55px;
 }

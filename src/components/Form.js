@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const Form = ({ setOrderList }) => {
+function Form({ toggle, setToggle, orderList, setOrderList }) {
 
     const [value, setValue] = useState('');
 
@@ -11,27 +11,25 @@ const Form = ({ setOrderList }) => {
     const handleSubmit = e => {
         e.preventDefault();
         const list = value.match(/(.+)/g).filter(item => item !== '').map((item, index) => item = { val: item, id: Math.random() * index, complete: false });
-        setOrderList(list);
+        setOrderList([...orderList, ...list]);
         setValue('');
+        setToggle(false);
     };
 
     return (
-        <div>
-            <label className="kirk" htmlFor="list">Kirk's App</label>
-            <form className="list" onSubmit={handleSubmit}>
-                <textarea
-                    id="list"
-                    name="list"
-                    rows="25"
-                    cols="33"
-                    autoComplete="off"
-                    onChange={handleChange}
-                    required={true}
-                    placeholder="input items">
-                </textarea>
-                <button className="btn butt" type="submit" onSubmit={handleSubmit}>create</button>
-            </form>
-        </div>
+        <form className={toggle ? 'add-input' : 'input-form'} onSubmit={handleSubmit}>
+            <textarea
+                id="list"
+                name="list"
+                rows="25"
+                cols="33"
+                autoComplete="off"
+                onChange={handleChange}
+                required={true}
+                placeholder="input items">
+            </textarea>
+            <button className="btn butt" type="submit" onSubmit={handleSubmit}>{toggle ? "add" : "create"}</button>
+        </form>
     );
 }
 
