@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Form({ toggle, setToggle, orderList, setOrderList }) {
+function Form({ text, toggle, setToggle, orderList, setOrderList }) {
 
     const [value, setValue] = useState('');
 
@@ -17,7 +17,7 @@ function Form({ toggle, setToggle, orderList, setOrderList }) {
     };
 
     return (
-        <form className={toggle ? 'add-input' : 'input-form'} onSubmit={handleSubmit}>
+        <form className="input-form" onSubmit={handleSubmit}>
             <textarea
                 id="list"
                 name="list"
@@ -26,7 +26,7 @@ function Form({ toggle, setToggle, orderList, setOrderList }) {
                 autoComplete="off"
                 onChange={handleChange}
                 required={true}
-                placeholder="input items">
+                placeholder={text}>
             </textarea>
             <button className="btn butt" type="submit" onSubmit={handleSubmit}>{toggle ? "add" : "create"}</button>
         </form>

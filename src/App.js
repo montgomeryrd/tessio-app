@@ -34,14 +34,25 @@ function App() {
 	return (
 		<div className="app">
 			<h1 className="kirk">Kirk's App</h1>
-			<button id={orderList.length > 0 ? "add-showing" : "add-hiding"} onClick={() => setToggle(true)}>+</button>
-			{!orderList.length ? 
-				<Form toggle={toggle} setToggle={setToggle} orderList={orderList} setOrderList={setOrderList} /> 
+			<button id={orderList.length > 0 ? "add-showing" : "add-remove"} onClick={() => setToggle(!toggle)}>+</button>
+			{!orderList.length ?
+				<div className="container">
+					<Form text={'input items'} toggle={toggle} setToggle={setToggle} orderList={orderList} setOrderList={setOrderList} />
+				</div>
 			:
-				<section className="list" style={{opacity: toggle ? .2 : 1}}>
-					{toggle ? <Form toggle={toggle} setToggle={setToggle} orderList={orderList} setOrderList={setOrderList} /> : '' }
-					<ul>{list}</ul>
-					<button className="btn butt" onClick={remove}>remove</button>
+				<section>
+					{toggle ? 
+						<div className="container">
+							<Form text={'add more items'} toggle={toggle} setToggle={setToggle} orderList={orderList} setOrderList={setOrderList} />
+						</div>
+						:
+						<div className="container">
+							<ul className="list">
+								{list}
+							</ul>
+							<button className="btn butt" onClick={remove}>remove</button>
+						</div>
+					}
 				</section>
 			}
 		</div>
