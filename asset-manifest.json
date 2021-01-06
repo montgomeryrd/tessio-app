@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tessio-app/static/css/main.d3f51721.chunk.css",
+    "main.css": "/tessio-app/static/css/main.6bcd5176.chunk.css",
     "main.js": "/tessio-app/static/js/main.d26c0267.chunk.js",
     "main.js.map": "/tessio-app/static/js/main.d26c0267.chunk.js.map",
     "runtime-main.js": "/tessio-app/static/js/runtime-main.96168b0c.js",
@@ -8,13 +8,13 @@
     "static/js/2.8a7c038a.chunk.js": "/tessio-app/static/js/2.8a7c038a.chunk.js",
     "static/js/2.8a7c038a.chunk.js.map": "/tessio-app/static/js/2.8a7c038a.chunk.js.map",
     "index.html": "/tessio-app/index.html",
-    "static/css/main.d3f51721.chunk.css.map": "/tessio-app/static/css/main.d3f51721.chunk.css.map",
+    "static/css/main.6bcd5176.chunk.css.map": "/tessio-app/static/css/main.6bcd5176.chunk.css.map",
     "static/js/2.8a7c038a.chunk.js.LICENSE.txt": "/tessio-app/static/js/2.8a7c038a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.96168b0c.js",
     "static/js/2.8a7c038a.chunk.js",
-    "static/css/main.d3f51721.chunk.css",
+    "static/css/main.6bcd5176.chunk.css",
     "static/js/main.d26c0267.chunk.js"
   ]
 }
