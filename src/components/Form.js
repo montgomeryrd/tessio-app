@@ -10,7 +10,7 @@ function Form({ text, toggle, setToggle, orderList, setOrderList }) {
 
     const handleSubmit = e => {
         e.preventDefault();
-        const list = value.match(/(.+)/g).filter(item => item !== '').map((item, index) => item = { val: item, id: Math.random() * index, complete: false });
+        const list = value.match(/(.+)/g).filter(item => item !== '').map((item, index) => item = { val: item, id: Math.random() * (index+1), complete: false });
         setOrderList([...orderList, ...list]);
         setValue('');
         setToggle(false);

@@ -26,7 +26,7 @@ function App() {
 	const list = orderList.map(item => {
 		return (
 			<div className="line" key={item.id} unselectable="on">
-				<li onClick={() => { update(item); } } style={{ opacity: item.complete ? .2 : 1 }}>{item.val}</li>
+				<li onClick={() => update(item)} style={{ opacity: item.complete ? .2 : 1 }}>{item.val}</li>
 			</div>
 		);
 	});
