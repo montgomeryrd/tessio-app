@@ -3,14 +3,15 @@
   background: transparent; /* make scrollbar transparent */
 }
 html {
-  background-color: #0e2e44;
+  background-color: #e6e6e6;
 }
 .app {
   position: absolute;
+  background-color: #0e2e44;
   left: 0;
   right: 0;
   max-width: 640px;  
-  height: 100vh;
+  height: 99vh;
   margin: 0 auto;
   border-radius: 2mm;
 }
@@ -34,20 +35,19 @@ html {
   transition: .7s;
 }
 #add-showing:hover {
-  color: #009aec;
   transition: .7s;
 }
 .container {
   position: relative;
   margin: 30px 10px 10px 10px;
-  height: 65vh;
-  border-top: 5px solid #007dc1;
-  border-left: 5px solid #007dc1;
-  border-right: 5px solid #005d8f;
-  border-bottom: 5px solid #005d8f;
+  height: 70vh;
+  border-top: 2px solid #007dc1;
+  border-left: 2px solid #007dc1;
+  border-right: 2px solid #005d8f;
+  border-bottom: 2px solid #005d8f;
 }
 .input-form {
-  height: 65vh;
+  height: 70vh;
 }
 .input-form textarea {
   width: 100%;
@@ -55,17 +55,13 @@ html {
   font-size: 2.3em;
   box-sizing: border-box;
 }
-.list {
-  height: 65vh;
-  /* font-size: 2em; */
-}
 ul {
   background-color: #fff;
   display: flex;
   flex-direction: column;
   text-align: center;
   overflow-y: scroll;
-  height: 65vh;
+  height: 100%;
 }
 li {
   font-size: 2rem;
@@ -113,15 +109,18 @@ li {
   top: 1px;
 }
 @media(max-width: 1000px) {
+  .app {
+    border-radius: 0;
+    height: 100vh;
+  }
   .kirk {
     font-size: 1.9em;
     margin: 15px 0 -15px 10px;
   }
   #add-showing {
-    margin: -18px 0 0 -25px;
+    margin: -19px 0 0 -25px;
   }
   .input-form textarea {
-    border: none;
     font-size: 1.4em;
   }
   .list li {

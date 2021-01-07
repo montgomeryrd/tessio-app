@@ -34,7 +34,7 @@ function App() {
 	return (
 		<div className="app">
 			<h1 className="kirk">Kirk's App</h1>
-			<button id={orderList.length > 0 ? "add-showing" : "add-remove"} onClick={() => setToggle(!toggle)}>+</button>
+			<button id={orderList.length > 0 ? "add-showing" : "add-remove"} style={{color: toggle ? '#009aec' : '#fff'}} onClick={() => setToggle(!toggle)}>+</button>
 			{!orderList.length ?
 				<div className="container">
 					<Form text={'input items'} toggle={toggle} setToggle={setToggle} orderList={orderList} setOrderList={setOrderList} />
