@@ -43,7 +43,7 @@ function App() {
 				<section>
 					{toggle ? 
 						<div className="container">
-							<Form text={'add more items'} toggle={toggle} setToggle={setToggle} orderList={orderList} setOrderList={setOrderList} />
+							<Form text={'add items'} toggle={toggle} setToggle={setToggle} orderList={orderList} setOrderList={setOrderList} />
 						</div>
 						:
 						<div className="container">
